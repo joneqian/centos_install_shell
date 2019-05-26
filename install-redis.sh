@@ -26,7 +26,7 @@ echo " 3: ... loglevel notice"
 echo " 4: ... logfile /var/log/redis.log"
 echo "*****************************************"
 /bin/cp -rf redis.conf /etc/
-sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" redis.conf > /etc/redis.conf
+sed -e "s/^daemonize no$/daemonize yes/" -e "s/^stop-writes-on-bgsave-error yes$/stop-writes-on-bgsave-error no/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" redis.conf > /etc/redis.conf
 
 cat > /etc/systemd/system/redis-server.service << EOF
 [Unit]
