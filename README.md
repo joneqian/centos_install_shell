@@ -9,3 +9,6 @@ chmod +x install.sh
 ```shell
 ./install.sh
 ```
+
+* 部分安装
+可修改install.sh，来实现只安装部分软件和服务
