@@ -2,9 +2,14 @@
 
 # install tools:vim wget git
 clear
-echo 'We are going to install vim,wget and git for you... '
+echo 'We are going to install vim,wget and git... '
 yum update -y
 yum install -y vim wget git
+
+clear
+echo 'We are going to enable firewalld... '
+systemctl enable firewalld.service
+systemctl start firewalld.service
 
 clear
 echo 'downing install shell... '
