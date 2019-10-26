@@ -24,7 +24,9 @@ cd ../
 mkdir /usr/local/nginx/conf.d
 mkdir /usr/local/nginx/cert
 wget https://qq-developer.oss-cn-hangzhou.aliyuncs.com/nginx_config/nginx.conf
+wget https://qq-developer.oss-cn-hangzhou.aliyuncs.com/nginx_config/web-site.conf
 /bin/cp -rf nginx.conf /usr/local/nginx/conf/
+/bin/cp -rf web-site.conf /usr/local/nginx/conf.d/
 
 cat > /lib/systemd/system/nginx.service << EOF
 [Unit]
