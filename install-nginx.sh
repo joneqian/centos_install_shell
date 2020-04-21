@@ -14,7 +14,7 @@ tar zxvf nginx-1.14.2.tar.gz
 clear
 echo 'installing nginx...'
 cd nginx-1.14.2
-./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_gzip_static_module
+./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_sub_module --with-http_ssl_module --with-http_gzip_static_module
 make
 make install
 
@@ -24,9 +24,11 @@ cd ../
 mkdir /usr/local/nginx/conf.d
 mkdir /usr/local/nginx/cert
 wget https://qq-developer.oss-cn-hangzhou.aliyuncs.com/nginx_config/nginx.conf
-wget https://qq-developer.oss-cn-hangzhou.aliyuncs.com/nginx_config/web-site.conf
+wget https://qq-developer.oss-cn-hangzhou.aliyuncs.com/nginx_config/www.conf
+wget https://qq-developer.oss-cn-hangzhou.aliyuncs.com/nginx_config/api.conf
 /bin/cp -rf nginx.conf /usr/local/nginx/conf/
-/bin/cp -rf web-site.conf /usr/local/nginx/conf.d/
+/bin/cp -rf www.conf /usr/local/nginx/conf.d/
+/bin/cp -rf api.conf /usr/local/nginx/conf.d/
 
 cat > /lib/systemd/system/nginx.service << EOF
 [Unit]
