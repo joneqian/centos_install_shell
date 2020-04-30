@@ -14,7 +14,7 @@ tar zxvf nginx-1.14.2.tar.gz
 clear
 echo 'installing nginx...'
 cd nginx-1.14.2
-./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_sub_module --with-http_ssl_module --with-http_gzip_static_module
+./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_sub_module --with-http_ssl_module --with-http_gzip_static_module --with-http_v2_module
 make
 make install
 
