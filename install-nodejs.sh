@@ -4,7 +4,7 @@
 
 clear
 echo 'We are going to install NodeJS for you... '
-curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+curl -sL https://rpm.nodesource.com/setup_14.x | bash -
 yum install -y gcc-c++ make
 yum install -y nodejs
 
