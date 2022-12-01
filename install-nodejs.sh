@@ -1,4 +1,14 @@
 #!/bin/bash
+###
+ # @Author: leyi leyi@myun.info
+ # @Date: 2020-04-21 22:09:28
+ # @LastEditors: leyi leyi@myun.info
+ # @LastEditTime: 2022-12-01 11:16:23
+ # @FilePath: /centos_install_shell/install-nodejs.sh
+ # @Description: 
+ # 
+ # Copyright (c) 2022 by leyi leyi@myun.info, All Rights Reserved. 
+### 
 
 # install nodejs and pm2
 
@@ -9,8 +19,9 @@ yum install -y gcc-c++ make
 yum install -y nodejs
 
 clear
-echo 'We are going to install pm2 for you... '
+echo 'We are going to install pm2,yarn,pnpm for you... '
 npm install -g pm2 yarn --registry=https://registry.npm.taobao.org
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 clear
 echo 'We are going to install pm2-logrotate for you... '
