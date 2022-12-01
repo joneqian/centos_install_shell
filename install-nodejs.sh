@@ -20,8 +20,7 @@ yum install -y nodejs
 
 clear
 echo 'We are going to install pm2,yarn,pnpm for you... '
-npm install -g pm2 yarn --registry=https://registry.npm.taobao.org
-curl -fsSL https://get.pnpm.io/install.sh | sh -
+npm install -g pm2 yarn pnpm --registry=https://registry.npmmirror.com
 
 clear
 echo 'We are going to install pm2-logrotate for you... '
