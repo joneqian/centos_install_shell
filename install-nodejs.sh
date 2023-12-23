@@ -3,7 +3,7 @@
  # @Author: leyi leyi@myun.info
  # @Date: 2020-04-21 22:09:28
  # @LastEditors: leyi leyi@myun.info
- # @LastEditTime: 2023-12-23 11:31:25
+ # @LastEditTime: 2023-12-23 11:40:40
  # @FilePath: /centos_install_shell/install-nodejs.sh
  # @Description: 
  # 
@@ -15,7 +15,7 @@
 clear
 echo 'We are going to install NodeJS for you... '
 yum install -y gcc-c++ make
-yum install https://rpm.nodesource.com/pub_20.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
+yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
 yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
 
 clear
