@@ -1,4 +1,14 @@
 #!/bin/bash
+###
+ # @Author: leyi leyi@myun.info
+ # @Date: 2020-04-21 22:09:28
+ # @LastEditors: leyi leyi@myun.info
+ # @LastEditTime: 2024-03-26 15:38:01
+ # @FilePath: /centos_install_shell/install-redis.sh
+ # @Description: 
+ # 
+ # Copyright (c) 2024 by ${git_name_email}, All Rights Reserved. 
+### 
 
 # install nginx
 
@@ -26,7 +36,16 @@ echo " 3: ... loglevel notice"
 echo " 4: ... logfile /var/log/redis.log"
 echo "*****************************************"
 /bin/cp -rf redis.conf /etc/
-sed -e "s/^daemonize no$/daemonize yes/" -e "s/^stop-writes-on-bgsave-error yes$/stop-writes-on-bgsave-error no/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" redis.conf > /etc/redis.conf
+
+sed -e "s/^daemonize no$/daemonize yes/" \
+-e "s/^stop-writes-on-bgsave-error yes$/stop-writes-on-bgsave-error no/" \
+-e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" \
+-e "s/^loglevel verbose$/loglevel notice/" \
+-e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" \
+-e "s/^port 6379$/port 7480/" \
+-e "s/^pidfile \/var\/run\/redis_6379.pid$/pidfile \/var\/run\/redis_7480.pid/" redis.conf > /etc/redis.conf
+
+
 
 cat > /etc/systemd/system/redis-server.service << EOF
 [Unit]
