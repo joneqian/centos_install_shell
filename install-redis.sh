@@ -3,7 +3,7 @@
  # @Author: leyi leyi@myun.info
  # @Date: 2020-04-21 22:09:28
  # @LastEditors: leyi leyi@myun.info
- # @LastEditTime: 2024-03-26 15:38:01
+ # @LastEditTime: 2024-04-03 19:58:27
  # @FilePath: /centos_install_shell/install-redis.sh
  # @Description: 
  # 
@@ -54,7 +54,7 @@ After=syslog.target network.target
 
 [Service]
 Type=forking
-PIDFile=/var/run/redis_6379.pid
+PIDFile=/var/run/redis_7480.pid
 ExecStart=/usr/local/bin/redis-server /etc/redis.conf
 ExecReload=/bin/kill -USR2 $MAINPID
 ExecStop=/bin/kill -SIGINT $MAINPID
