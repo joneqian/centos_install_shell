@@ -3,7 +3,7 @@
  # @Author: leyi leyi@myun.info
  # @Date: 2020-04-21 22:09:28
  # @LastEditors: leyi leyi@myun.info
- # @LastEditTime: 2024-04-03 20:26:47
+ # @LastEditTime: 2024-05-01 22:05:19
  # @FilePath: /centos_install_shell/install-nginx.sh
  # @Description: 
  # 
@@ -18,12 +18,12 @@ yum install -y gcc-c++  pcre pcre-devel zlib zlib-devel openssl openssl-devel
 
 clear
 echo 'downding nginx....'
-wget http://nginx.org/download/nginx-1.14.2.tar.gz
-tar zxvf nginx-1.14.2.tar.gz
+wget http://nginx.org/download/nginx-1.26.0.tar.gz
+tar zxvf nginx-1.26.0.tar.gz
 
 clear
 echo 'installing nginx...'
-cd nginx-1.14.2
+cd nginx-1.26.0
 ./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_sub_module --with-http_ssl_module --with-http_gzip_static_module --with-http_v2_module
 make
 make install

@@ -3,7 +3,7 @@
  # @Author: leyi leyi@myun.info
  # @Date: 2020-04-21 22:09:28
  # @LastEditors: leyi leyi@myun.info
- # @LastEditTime: 2023-12-23 11:40:40
+ # @LastEditTime: 2024-05-01 21:52:45
  # @FilePath: /centos_install_shell/install-nodejs.sh
  # @Description: 
  # 
@@ -15,9 +15,14 @@
 clear
 echo 'We are going to install NodeJS for you... '
 yum install -y gcc-c++ make
-yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
-yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
 
+# yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
+# yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
+
+# installs NVM (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+# download and install Node.js
+nvm install 20
 clear
 echo 'We are going to install pm2,yarn,pnpm for you... '
 npm install -g pm2 yarn pnpm --registry=https://registry.npmmirror.com
