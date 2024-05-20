@@ -3,7 +3,7 @@
  # @Author: leyi leyi@myun.info
  # @Date: 2020-04-21 22:09:28
  # @LastEditors: leyi leyi@myun.info
- # @LastEditTime: 2024-04-03 19:58:27
+ # @LastEditTime: 2024-05-20 18:46:22
  # @FilePath: /centos_install_shell/install-redis.sh
  # @Description: 
  # 
@@ -18,12 +18,12 @@ yum install -y tcl gcc-c++
 
 clear
 echo 'downding redis....'
-wget http://download.redis.io/releases/redis-4.0.10.tar.gz
-tar zxvf redis-4.0.10.tar.gz
+wget http://download.redis.io/releases/redis-6.2.9.tar.gz
+tar zxvf redis-6.2.9.tar.gz
 
 clear
 echo 'installing redis...'
-cd redis-4.0.10
+cd redis-6.2.9
 make
 make test
 make install
@@ -64,8 +64,8 @@ WantedBy=multi-user.target
 EOF
 
 systemctl daemon-reload
-systemctl start redis-server.service
 systemctl enable redis-server.service
+systemctl start redis-server.service
 
 clear
 echo 'redis is now installed and running...'

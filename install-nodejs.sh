@@ -3,7 +3,7 @@
  # @Author: leyi leyi@myun.info
  # @Date: 2020-04-21 22:09:28
  # @LastEditors: leyi leyi@myun.info
- # @LastEditTime: 2024-05-01 21:52:45
+ # @LastEditTime: 2024-05-20 18:06:51
  # @FilePath: /centos_install_shell/install-nodejs.sh
  # @Description: 
  # 
@@ -21,6 +21,8 @@ yum install -y gcc-c++ make
 
 # installs NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # download and install Node.js
 nvm install 20
 clear
