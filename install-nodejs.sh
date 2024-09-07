@@ -3,7 +3,7 @@
  # @Author: leyi leyi@myun.info
  # @Date: 2020-04-21 22:09:28
  # @LastEditors: leyi leyi@myun.info
- # @LastEditTime: 2024-05-20 18:06:51
+ # @LastEditTime: 2024-09-07 17:17:56
  # @FilePath: /centos_install_shell/install-nodejs.sh
  # @Description: 
  # 
@@ -20,11 +20,13 @@ yum install -y gcc-c++ make
 # yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
 
 # installs NVM (Node Version Manager)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
+# 设置镜像源
+export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
+
 # download and install Node.js
-nvm install 20
+nvm install 22
 clear
 echo 'We are going to install pm2,yarn,pnpm for you... '
 npm install -g pm2 yarn pnpm --registry=https://registry.npmmirror.com
