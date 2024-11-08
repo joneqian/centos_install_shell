@@ -2,7 +2,7 @@
  * @Author: leyi leyi@myun.info
  * @Date: 2024-09-10 16:57:25
  * @LastEditors: leyi leyi@myun.info
- * @LastEditTime: 2024-09-10 16:57:56
+ * @LastEditTime: 2024-11-08 17:17:17
  * @FilePath: /centos_install_shell/github 镜像.md
  * @Description:
  *
@@ -10,9 +10,14 @@
 -->
 
 ```sh
+# 安装工具
+yum install bind-utils
+```
+
+```sh
 # 获取 IP
-$ nslookup github.global.ssl.fastly.net
-$ nslookup github.com
+nslookup github.global.ssl.fastly.net
+nslookup github.com
 ```
 
 ```sh
