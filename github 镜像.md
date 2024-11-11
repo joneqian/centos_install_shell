@@ -2,7 +2,7 @@
  * @Author: leyi leyi@myun.info
  * @Date: 2024-09-10 16:57:25
  * @LastEditors: leyi leyi@myun.info
- * @LastEditTime: 2024-11-08 17:17:17
+ * @LastEditTime: 2024-11-11 10:12:54
  * @FilePath: /centos_install_shell/github 镜像.md
  * @Description:
  *
@@ -18,12 +18,17 @@ yum install bind-utils
 # 获取 IP
 nslookup github.global.ssl.fastly.net
 nslookup github.com
+nslookup assets-cdn.github.com
 ```
 
 ```sh
 vim /etc/hosts
 
 # 添加如下信息
-74.86.228.110 global-ssl.fastly.net
+31.13.69.169 global-ssl.fastly.net
 20.205.243.166 github.com
+185.199.110.153 assets-cdn.github.com
+185.199.108.153 assets-cdn.github.com
+185.199.111.153 assets-cdn.github.com
+185.199.110.153 assets-cdn.github.com
 ```
