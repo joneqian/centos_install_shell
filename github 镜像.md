@@ -2,7 +2,7 @@
  * @Author: leyi leyi@myun.info
  * @Date: 2024-09-10 16:57:25
  * @LastEditors: leyi leyi@myun.info
- * @LastEditTime: 2024-11-11 10:12:54
+ * @LastEditTime: 2024-11-20 14:48:21
  * @FilePath: /centos_install_shell/github 镜像.md
  * @Description:
  *
@@ -15,7 +15,7 @@ yum install bind-utils
 ```
 
 ```sh
-# 获取 IP
+# 获取 IP，取 "Non-authoritative answer" 下的 IP
 nslookup github.global.ssl.fastly.net
 nslookup github.com
 nslookup assets-cdn.github.com
