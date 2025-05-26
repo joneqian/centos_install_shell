@@ -41,3 +41,9 @@ systemctl restart NetworkManager
 # Ubuntu
 systemd-resolve --flush-caches
 ```
+
+# GitHub520
+
+GitHub520 是一个开源的 GitHub 项目，帮助大家访问 GitHub，还提供了无需访问 GitHub 就能获取最新的 hosts 内容：
+
+文件：https://raw.hellogithub.com/hosts
