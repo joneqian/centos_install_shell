@@ -39,7 +39,12 @@ vim /etc/hosts
 systemctl restart NetworkManager
 
 # Ubuntu
-systemd-resolve --flush-caches
+# 清除 DNS 缓存
+sudo resolvectl flush-caches
+# 查看 DNS 统计信息
+resolvectl statistics
+# 查看当前 DNS 状态
+resolvectl status
 ```
 
 # GitHub520
