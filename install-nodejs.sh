@@ -3,7 +3,7 @@
  # @Author: leyi leyi@myun.info
  # @Date: 2020-04-21 22:09:28
  # @LastEditors: leyi leyi@myun.info
- # @LastEditTime: 2025-10-29 09:58:02
+ # @LastEditTime: 2026-04-23 14:07:51
  # @FilePath: /centos_install_shell/install-nodejs.sh
  # @Description: 
  # 
@@ -34,12 +34,7 @@ npm install -g pm2 yarn pnpm --registry=https://registry.npmmirror.com
 clear
 echo 'We are going to install pm2-logrotate for you... '
 pm2 install pm2-logrotate
-pm2 set pm2-logrotate:max_size 10M
-pm2 set pm2-logrotate:retain 3
-pm2 set pm2-logrotate:dateFormat YYYY-MM-DD_HH-mm-ss
-pm2 set pm2-logrotate:workerInterval 60
-pm2 set pm2-logrotate:rotateInterval 0 0 * * *
-pm2 set pm2-logrotate:TZ Asia/Shanghai
+pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:retain 3 && pm2 set pm2-logrotate:dateFormat YYYY-MM-DD_HH-mm-ss && pm2 set pm2-logrotate:workerInterval 60 && pm2 set pm2-logrotate:rotateInterval '0 0 * * *' && pm2 set pm2-logrotate:TZ Asia/Shanghai
 
 clear
 echo "NodeJS is now installed @ version:"
